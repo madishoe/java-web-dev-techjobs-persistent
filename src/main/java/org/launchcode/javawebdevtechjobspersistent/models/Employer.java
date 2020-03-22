@@ -10,14 +10,15 @@ import java.util.List;
 @Entity
 public class Employer extends AbstractEntity {
 
-    @NotBlank(message = "Location field cannot be blank")
+    @NotBlank(message = "Employer location cannot be blank")
     private String location;
 
     @OneToMany
-    @JoinColumn
+    @JoinColumn(name="employer_id")
     private List<Job> jobs = new ArrayList<>();
 
     // Getters and setters.
+
     public String getLocation() {
         return location;
     }
