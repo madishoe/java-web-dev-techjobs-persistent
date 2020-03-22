@@ -6,7 +6,6 @@ import javax.persistence.Id;
 @Entity
 public class Skill extends AbstractEntity {
 
-    @Id
     private String description;
 
     public String getDescription() {
